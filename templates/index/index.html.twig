@@ -4,10 +4,10 @@
 
 {% block body %}
 <!--Menu Backdrop-->
-<div class="menu-backdrop"></div>
+{# <div class="menu-backdrop"></div> #}
 
 <!-- Hidden Navigation Bar -->
-<section class="hidden-bar">
+{# <section class="hidden-bar">
     <!-- Hidden Bar Wrapper -->
     <div class="inner-box">
         <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
@@ -58,7 +58,7 @@
         </div><!-- /.Side-menu -->
     
     </div><!-- / Hidden Bar Wrapper -->
-</section>
+</section> #}
 <!-- / Hidden Bar -->
 
 <!--Info Back Drop-->
@@ -87,30 +87,6 @@
 
 <section class="banner-section">
 
-    <!-- social link -->
-    <div class="banner-social-list">
-        <span class="line"></span>
-
-        <ul class="custom-ul">
-        <li> <a href="#"> FB </a> </li>
-        <li><a href="#"> IN </a> </li>
-        <li><a href="#"> YT </a> </li>
-        </ul>
-
-        <span class="line"></span>
-    </div>
-
-    <!-- social link -->
-    <div class="banner-call">
-        <span class="line"></span>
-
-        <ul class="call-ul">
-        <li><a href="tel:+88-123-123456">Booking : +88-123-123456</a></li>
-        </ul>
-
-        <span class="line"></span>
-    </div>
-
         <!-- Banner Inner Container -->
         <div class="banner-container">
         <div class="auto-container">
@@ -120,8 +96,8 @@
             <div class="content">
                 <div class="clearfix">
                 <div class="inner">
-                    <h1>Delightful Experience</h1>
-                    <div class="text">A taste of perfection in every dish -  <span class="theme_color">fine dining with a modern twist.</span></div>
+                    <h1>Restaurant chez Sandrine</h1>
+                    <div class="text text-white">Une cuisine savoureuse et authentique -  <span class="theme_color">revisitée avec une touche de modernité.</span></div>
                 </div>
                 </div>
             </div>
@@ -132,13 +108,13 @@
             <div class="swiper-wrapper">
                 <!--Slide Item-->
                 <div class="swiper-slide slide-item">
-                <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-1.jpg') }});"></div>
+                <div class="image-layer" style="background-image: url({{ asset('assets/images/restoAir.jpeg') }});"></div>
                 </div>
                 <div class="swiper-slide slide-item">
-                <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-2.jpg') }});"></div>
+                <div class="image-layer" style="background-image: url({{ asset('assets/images/brasero.jpeg') }});"></div>
                 </div>
                 <div class="swiper-slide slide-item">
-                <div class="image-layer" style="background-image: url({{ asset('assets/images/main-slider/slider-3.jpg') }});"></div>
+                <div class="image-layer" style="background-image: url({{ asset('assets/images/restoAir.jpeg') }});"></div>
                 </div>
             </div>
 
@@ -150,13 +126,13 @@
             <div class="hero-info">
                 <div class="top-bar-content">
                     <div class="info-item">
-                    <span class="label">VISIT US :</span> Restaurant St, Delicious City, London 9578, UK
+                    <span class="label">Notre adresse :</span> 159 rue des illards, 01140 st didier sur chalaronne
                     </div>
                     <div class="separator">
                     <img src="{{ asset('assets/images/icons/star-element.svg') }}" alt="separator">
                     </div>
                     <div class="info-item">
-                    <span class="label">WE ARE OPEN :</span> Daily - 8.00 am to 10.00 pm
+                    <span class="label">Ouvert de :</span> Mardi au dimanche - 19h à 22H00 et dimanche 12h à 15h
                     </div>
                 </div>
             </div>
@@ -164,9 +140,9 @@
         </div>
         </div>
 
-        <a href="book-table.html" class="book-btn">
+        {# <a href="book-table.html" class="book-btn">
         <span class="icon"> <img src="{{ asset('assets/images/resource/book-icon-1.png') }}" alt="image" title="image"> </span>
-        </a>
+        </a> #}
 </section>
 
 <!--About Section-->
@@ -221,7 +197,7 @@
             <div class="top-pattern"> </div>
             <div class="title-box centered">
                 <div class="title-badge"> <img src="{{ asset('assets/images/resource/menu-title-badge.svg') }}" alt="image" title="image"> </div>
-                <h2>Our Menu</h2>
+                <h2>Notre Menu</h2>
             </div>
 
             <!-- menu card corner images -->
@@ -330,7 +306,7 @@
             <div class="row clearfix">
                 <div class="image-col col-lg-6 col-md-12 col-sm-12">
                     <div class="inner">
-                        <div class="image"><img src="{{ asset('assets/images/resource/dessert1.jpg') }}" alt="image"></div>
+                        <div class="image"><img src="{{ asset('assets/images/fraiseMelba.jpeg') }}" alt="image"></div>
                     </div>
                 </div>
 
@@ -434,7 +410,7 @@
                 <div class="offer-block-two">
                     <div class="inner-box">
                         <div class="cat-name">desserts</div>
-                        <div class="image"><a href="#"><img src="{{ asset('assets/images/resource/special-dish5.png') }}" alt="image"></a></div>
+                        <div class="image"><a href="#"><img src="{{ asset('assets/images/fraiseMelba.jpeg') }}" alt="image"></a></div>
                         <h5><a href="menu-list-1.html">Greek Salad</a></h5>
                         <div class="text desc">flavorful, filled with panko bread crumbs, pine nuts, parsley, sun-dried tomatoes.</div>
                         <div class="price">$39.00</div>
@@ -664,7 +640,7 @@
 </section>
 
 <!--Testimonials Section-->
-<section class="testimonials-section section-kt">
+{# <section class="testimonials-section section-kt">
     <div class="image-layer" style="background-image: url({{ asset('assets/images/background/testimonial-bg1.jpg') }});"></div>
     <div class="auto-container">
         <div class="title-box centered">
@@ -752,7 +728,7 @@
         </div>
 
     </div>
-</section>
+</section> #}
 
 <!--Recnt Updates Section-->
 <section class="news-section section-kt">
@@ -766,9 +742,9 @@
             <div class="news-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="0ms">
                     <div class="image-box">
-                        <div class="image rounded"><a href="blog-single-post.html"><img src="{{ asset('assets/images/resource/news-2.jpg') }}" alt="image"></a></div>
+                        <div class="image rounded"><a href="blog-single-post.html"><img src="{{ asset('assets/images/brazero.jpg') }}" style="height: 500px; width: 100%;" alt="image"></a></div>
                         <div class="over-content">
-                            <div class="date">30 <span>May | 2025</span></div>
+                            <div class="date text-white">07 <span>mars | 2026</span></div>
                             <div class="cat">Food, flavour</div>
                             <h4><a href="blog-single-post.html">So yummy, tasty, you'll eat with your eyes.</a></h4>
                         </div>
@@ -820,7 +796,7 @@
 </section>
 
 <!--Instagram post-->
-<section class="ig-post-section section-kt">
+{# <section class="ig-post-section section-kt">
     <div class="auto-container">
         <div class="title-box centered">
             <div class="subtitle"><span>follow us</span></div>
@@ -857,5 +833,5 @@
         
         
     </div>
-</section>
+</section> #}
 {% endblock %}

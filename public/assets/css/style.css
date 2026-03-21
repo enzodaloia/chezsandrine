@@ -1346,7 +1346,7 @@ body.visible-sidebar{
   position: relative;
   padding: 150px 0 50px 0;
   background-color: var(--color-one);
-  background-image:url(../images/resource/pattern-for-hero-section.png);
+  /* background-image:url(../images/resource/pattern-for-hero-section.png); */
   background-repeat: no-repeat;
   background-position: center 180%;
   background-size: auto; /* Or use 'cover' if you want it stretched */
