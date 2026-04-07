@@ -157,21 +157,17 @@ if($('.main-header').length){
 	//Banner Carousel
 	if ($('.banner-slider').length) {
 		var swiper = new Swiper('.banner-slider', {
-			autoplay: true,
-			autoplaySpeed: 7000,
-			effect: "fade",
-			speed: 1000,		
-			margin: 0,
-			slidesPerView: 1,
-			spaceBetween: 0,
-			loop: true,
 			autoplay: {
-	        delay: 7000
-	      },
-	      navigation: {
-	        nextEl: '.swiper-button-next',
-	        prevEl: '.swiper-button-prev',
-	      }
+				delay: 7000
+			},
+			effect: "fade",
+			speed: 1000,
+			slidesPerView: 1,
+			loop: true,
+			navigation: {
+				nextEl: '.banner-slider .swiper-button-next',
+				prevEl: '.banner-slider .swiper-button-prev',
+			},
 		});
 	}
 	

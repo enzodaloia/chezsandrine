@@ -5,13 +5,20 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+            {{ encore_entry_link_tags('app') }}
+            {# <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
-            <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+            <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}"> #}
         {% endblock %}
 
         {% block javascripts %}
-            <script src="{{ asset('assets/js/jquery.js') }}"></script>
+            {# Scripts globaux non-module #}
+            <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
+            <script src="{{ asset('assets/js/wow.js') }}"></script>
+
+            {# Bundle Webpack (jQuery + Bootstrap + Owl + Swiper + App.js) #}
+            {{ encore_entry_script_tags('app') }}
+            {# <script src="{{ asset('assets/js/jquery.js') }}"></script>
             <script src="{{ asset('assets/js/popper.min.js') }}"></script>
             <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
             <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
@@ -21,7 +28,7 @@
             <script src="{{ asset('assets/js/appear.js') }}"></script>
             <script src="{{ asset('assets/js/wow.js') }}"></script>
             <script src="{{ asset('assets/js/parallax.min.js') }}"></script>
-            <script src="{{ asset('assets/js/custom-script.js') }}"></script>
+            <script src="{{ asset('assets/js/custom-script.js') }}"></script> #}
         {% endblock %}
     </head>
     <body>
@@ -219,6 +226,86 @@
                 </div>
             </header>
             <!--End Main Header -->
+            <!--Menu Backdrop-->
+            <div class="menu-backdrop"></div>
+            <!-- Hidden Navigation Bar -->
+            <section class="hidden-bar">
+                <!-- Hidden Bar Wrapper -->
+                <div class="inner-box">
+                    <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
+                    <div class="logo-box"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt="image" title="Restoria - Restaurants HTML Template"></a></div>
+                    
+                    <!-- .Side-menu -->
+                    <div class="side-menu">
+                            <ul class="navigation clearfix">
+                            <li class="dropdown"><a href="#">Home</a>
+                                <ul>
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                    <li><a href="#">Home Four</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown"><a href="menu-list-1.html">Menus</a>
+                                <ul>
+                                    <li><a href="menu-list-1.html">Menu List 1</a></li>
+                                    <li><a href="menu-list-2.html">Menu List 2</a></li>
+                                    <li><a href="menu-list-3.html">Menu List 3</a></li>
+                                    <li><a href="menu-list-4.html">Menu List 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="our-chef.html">Our chefs</a></li>
+                            <li class="dropdown"><a href="#">Pages</a>
+                                <ul>
+                                    <li><a href="gallery-masonry.html">Photo Gallery</a></li>
+                                    <li><a href="book-table.html">Reservation 1</a></li>
+                                    <li><a href="book-table-option2.html">Reservation 2</a></li>
+                                    <li><a href="testimonial.html">Testimonial</a></li>
+                                    <li><a href="blog-list.html">Blog List</a></li>
+                                    <li><a href="blog-single-post.html">Blog Single Post</a></li>
+                                    <li><a href="#">Dropdown Menu 1</a></li>
+                                    <li><a href="#">Dropdown Lorem 2</a></li>
+                                    <li class="dropdown"><a href="#">Dropdown Menu 3</a>
+                                        <ul>
+                                            <li><a href="#">Dropdown Menu level 2</a></li>
+                                            <li><a href="#">Dropdown Menu level 2</a></li>
+                                            <li><a href="#">Dropdown Menu Level 2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="contact-us.html">Contact</a></li>
+                        </ul>
+                    </div><!-- /.Side-menu -->
+                
+                </div><!-- / Hidden Bar Wrapper -->
+            </section>
+            <!-- / Hidden Bar -->
+
+            <!--Info Back Drop-->
+            <div class="info-back-drop"></div>
+
+            <!-- Hidden Bar -->
+            <section class="info-bar">
+                <div class="inner-box">
+                    <div class="cross-icon"><span class="far fa-close"></span></div>
+                    <div class="image-box"><img src="{{ asset('assets/images/resource/sidebar-image.jpg') }}" alt="image" title=""></div>
+                    <div class="logo-box"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt="image" title="Restoria - Restaurants HTML Template"></a></div>
+
+                    <h5>Visit Us</h5>
+                    <ul class="info">
+                        <li>Restoria, Arrondissement, <br> Paris 9578</li>
+                        <li> <span class="ib-ttl"> Lunch Time </span>- 10.00 am – 3:30 pm </li>
+                        <li><span class="ib-ttl"> Dinner Time</span> - 08.00 pm – 10:30 pm</li>
+                        <li><a href="mailto:booking@domainame.com">booking@domainame.com</a></li>
+                    </ul>
+                    <div class="booking-info">
+                        <div class="bk-no"><a href="tel:+88-123-123456">Booking: +88-123-123456</a></div>
+                    </div>
+                </div>
+            </section>
+            <!--End Hidden Bar -->
             {% block body %}{% endblock %}
             <!--Main Footer-->
             <footer class="main-footer">
