@@ -1,0 +1,120 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<!-- Inner Banner Section -->
+<section class="inner-banner">
+    <div class="image-layer" style="background-image: url({{ asset('assets/images/restoAir.jpeg') }});"></div>
+    <div class="auto-container">
+        <div class="inner">
+            <h1>Contactez-nous</h1>
+            <div class="sub_text">
+                <p class="text-white">
+                    Une question ou une table à réserver ? <span class="primary-color">On vous accueille avec plaisir.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Banner Section -->
+
+<!--Contact Info Section-->
+<section class="contact-page section-kt">
+
+    <!--Location form Section-->
+    <div class="auto-container">
+        <div class="c-page-form-box">
+            <div class="row clearfix">
+
+            <!--form image Section-->
+            <div class="loc-block info-block col-lg-5 col-md-12 col-sm-12">
+                <div class="contact-image">
+                    <img src="{{ asset('assets/images/restoAir.jpeg') }}" alt="image">
+                </div>
+                <h5> Rendez-nous visite </h5>
+                <div class="text">
+                    159 rue des illards, 01140 Saint-Didier-sur chalaronne <br> <br> 
+                    <span class="c-info-ttl text-white"> Mardi au Samedi </span> : 18h30 – 22h30 <br>  <span class="c-info-ttl text-white">Dimanche </span> : 12h00 – 14h00 et 18h30 - 22h30 <br>  <br> 
+                    <span class="more-link"> Téléphone : <a href="tel:+0474025614">04 74 02 56 14</a> </span> <br>  
+                    <span class="more-link"> Email: <a href="mailto:campingchalaronne@orange.fr">campingchalaronne@orange.fr</a></span>
+
+                </div>
+            </div>
+
+            <!--Vertical line -->
+            <div class="col-12 col-md-1 d-flex justify-content-center middle-line-wrapper">
+                <div class="middle-line-container">
+                <div class="dot top-dot"></div>
+                <div class="v-line"></div>
+                <div class="dot bottom-dot"></div>
+                </div>
+            </div>
+
+            <!--form Section-->
+            <div class="loc-block col-lg-6 col-md-12 col-sm-12">
+                <div class="form-side">
+                    <div class="title-box centered">
+                        <div class="subtitle"><span>Ecrivez-nous !</span></div>
+                        <h2>Message us</h2>
+                        <div class="text desc text-white">Contactez-nous — <span class="theme_color">nous vous répondrons dans les plus brefs délais pour préparer votre venue.</span></div>
+                    </div>
+                    <div class="default-form reservation-form">
+                        <form method="post" action="index.html">
+                            <div class="clearfix">
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <input type="text" name="fieldname" value="" placeholder="Panchaud Sandrine" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="field-inner">
+                                        <input type="text" name="fieldname" value="" placeholder="campingchalaronne@orange.fr" required="">
+                                    </div>
+                                </div>
+                                <div class="form-group ">
+                                    <div class="field-inner">
+                                        <input type="text" name="fieldname" value="04 74 02 56 14" placeholder="" required="">
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group ">
+                                    <div class="field-inner">
+                                        <textarea name="fieldname" placeholder="Votre message..." required=""></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" class="theme-btn btn-style-one clearfix">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">Envoyer</span>
+                                            <span class="text-two">Envoyez</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Map Section-->
+<section class="contact-map">
+    <div class="row clearfix">
+        <iframe 
+            src="https://www.google.com/maps?q=46.175263504163055,4.814278114512782&hl=fr&z=16&output=embed"
+            width="100%" 
+            height="500" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+{% endblock %}

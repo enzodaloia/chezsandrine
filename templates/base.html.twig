@@ -90,7 +90,7 @@
             
             <!-- Main Header-->
             <header class="main-header header-down">
-                <div class="header-top">
+                {# <div class="header-top">
                     <div class="auto-container">
                         <div class="inner clearfix">
                             <div class="top-left clearfix">
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> #}
                 <!-- Header Upper -->
                 <div class="header-upper">        
                     <div class="auto-container">
@@ -115,7 +115,7 @@
                         <div class="main-box clearfix">
                             <!--Logo-->
                             <div class="logo-box">
-                                <div class="logo"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" alt="image" title="Restaurant chez Sandrine" style="width: 100%; height: 150px;"></a></div>
+                                {# <div class="logo"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" alt="image" title="Restaurant chez Sandrine" style="width: 100%; height: 150px;"></a></div> #}
                             </div>
 
                             <div class="nav-box clearfix">
@@ -123,92 +123,20 @@
                                 <div class="nav-outer clearfix">         
                                     <nav class="main-menu">
                                         <ul class="navigation clearfix">
-                                            <li class="dropdown current"><a href="#">Home</a>
+                                            <li><a href="{{ path('app_index') }}">Accueil</a></li>
+                                            <li class="dropdown"><a href="#">Nos cartes</a>
                                                 <ul>
-                                                    <li><a href="#">Home One</a></li>
-                                                    <li><a href="#">Home Two</a></li>
-                                                    <li><a href="#">Home Three</a></li>
-                                                    <li><a href="#">Home Four</a></li>
+                                                    <li><a href="#">Menu</a></li>
+                                                    <li><a href="#">Desserts</a></li>
+                                                    <li><a href="#">Boissons</a></li>
                                                 </ul>
                                             </li>
-
-                                            <li class="dropdown has-mega-menu"><a href="menu-list.html">Menus</a>
-                                                <ul>
-                                                    <li>
-                                                        <div class="mega-menu">
-                                                            <div class="menu-inner">
-                                                                <div class="auto-container">
-                                                                    <div class="row clearfix">
-                                                                        <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                            <div class="image"><a href="menu-list-1.html"><img src="{{ asset('assets/images/resource/menu-1-thumb.jpg') }}" alt="image"></a></div>
-                                                                            <div class="title"><a href="menu-list-1.html">Menu list 1</a></div>
-                                                                        </div>
-                                                                        <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                            <div class="image"><a href="menu-list-2.html"><img src="{{ asset('assets/images/resource/menu-2-thumb.jpg') }}" alt="image"></a></div>
-                                                                            <div class="title"><a href="menu-list-2.html">Menu list 2</a></div>
-                                                                        </div>
-                                                                        <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                            <div class="image"><a href="menu-list-3.html"><img src="{{ asset('assets/images/resource/menu-3-thumb.jpg') }}" alt="image"></a></div>
-                                                                            <div class="title"><a href="menu-list-3.html">Menu list 3</a></div>
-                                                                        </div>
-                                                                        <div class="menu-block col-lg-3 col-md-6 col-sm-6">
-                                                                            <div class="image"><a href="menu-list-4.html"><img src="{{ asset('assets/images/resource/menu-4-thumb.jpg') }}" alt="image"></a></div>
-                                                                            <div class="title"><a href="menu-list-4.html">Menu list 4</a></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li class="dropdown"><a href="#">Pages</a>
-                                                <ul>
-                                                    <li><a href="gallery-masonry.html">Photo Gallery</a></li>
-                                                    <li><a href="book-table.html">Reservation 1</a></li>
-                                                    <li><a href="book-table-option2.html">Reservation 2</a></li>
-                                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                                    <li><a href="blog-list.html">Blog List</a></li>
-                                                    <li><a href="blog-single-post.html">Blog Single Post</a></li>
-                                                    <li><a href="#">Dropdown Menu 1</a></li>
-                                                    <li><a href="#">Dropdown Lorem 2</a></li>
-                                                    <li class="dropdown"><a href="#">Dropdown Menu 3</a>
-                                                        <ul>
-                                                            <li><a href="#">Dropdown Menu level 2</a></li>
-                                                            <li><a href="#">Dropdown Menu level 2</a></li>
-                                                            <li><a href="#">Dropdown Menu Level 2</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact-us.html">Contact</a></li>
+                                            <li><a href="{{ path('app_contact') }}">Contact</a></li>
                                         </ul>
                                     </nav>
                                     <!-- Main Menu End-->
                                 </div>
                                 <!--Nav Outer End-->
-
-                                {# <div class="links-box clearfix">
-                                    <div class="link link-btn">
-                                        <a href="book-table.html" class="theme-btn btn-style-one clearfix">
-                                            <span class="btn-wrap">
-                                                <span class="text-one">book a table</span>
-                                                <span class="text-two">book a table</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="link info-toggler">
-                                        <button class="info-btn">
-                                            <span class="hamburger">
-                                                <span class="top-bun"></span>
-                                                <span class="meat"></span>
-                                                <span class="bottom-bun"></span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div> #}
 
                                 <!-- Hidden Nav Toggler -->
                                 <div class="nav-toggler">
@@ -233,49 +161,20 @@
                 <!-- Hidden Bar Wrapper -->
                 <div class="inner-box">
                     <div class="cross-icon hidden-bar-closer"><span class="far fa-close"></span></div>
-                    <div class="logo-box"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/images/resource/sidebar-logo.png') }}" alt="image" title="Restoria - Restaurants HTML Template"></a></div>
+                    <div class="logo-box"><a href="index.html" title="Restaurant chez Sandrine"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" style="height: auto;" alt="image" title="Restaurant chez Sandrine"></a></div>
                     
                     <!-- .Side-menu -->
                     <div class="side-menu">
-                            <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="#">Home</a>
+                        <ul class="navigation clearfix">
+                            <li><a href="{{ path('app_index') }}">Accueil</a></li>
+                            <li class="dropdown"><a href="#">Nos cartes</a>
                                 <ul>
-                                    <li><a href="#">Home One</a></li>
-                                    <li><a href="#">Home Two</a></li>
-                                    <li><a href="#">Home Three</a></li>
-                                    <li><a href="#">Home Four</a></li>
+                                    <li><a href="#">Menu</a></li>
+                                    <li><a href="#">Desserts</a></li>
+                                    <li><a href="#">Boissons</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="menu-list-1.html">Menus</a>
-                                <ul>
-                                    <li><a href="menu-list-1.html">Menu List 1</a></li>
-                                    <li><a href="menu-list-2.html">Menu List 2</a></li>
-                                    <li><a href="menu-list-3.html">Menu List 3</a></li>
-                                    <li><a href="menu-list-4.html">Menu List 4</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="our-chef.html">Our chefs</a></li>
-                            <li class="dropdown"><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="gallery-masonry.html">Photo Gallery</a></li>
-                                    <li><a href="book-table.html">Reservation 1</a></li>
-                                    <li><a href="book-table-option2.html">Reservation 2</a></li>
-                                    <li><a href="testimonial.html">Testimonial</a></li>
-                                    <li><a href="blog-list.html">Blog List</a></li>
-                                    <li><a href="blog-single-post.html">Blog Single Post</a></li>
-                                    <li><a href="#">Dropdown Menu 1</a></li>
-                                    <li><a href="#">Dropdown Lorem 2</a></li>
-                                    <li class="dropdown"><a href="#">Dropdown Menu 3</a>
-                                        <ul>
-                                            <li><a href="#">Dropdown Menu level 2</a></li>
-                                            <li><a href="#">Dropdown Menu level 2</a></li>
-                                            <li><a href="#">Dropdown Menu Level 2</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="contact-us.html">Contact</a></li>
+                            <li><a href="{{ path('app_contact') }}">Contact</a></li>
                         </ul>
                     </div><!-- /.Side-menu -->
                 
@@ -316,35 +215,17 @@
                             <div class="footer-col info-col col-lg-6 col-md-12 col-sm-12">
                                 <div class="inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                                     <div class="content">
-                                        <div class="logo"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/images/logo.png') }}" alt="image" title="Restoria - Restaurants HTML Template"></a></div>
+                                        <div class="logo"><a href="{{ path('app_index') }}" title="Restaurant chez Sandrine"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" style="max-width: 100%; height: 150px;" alt="image" title="Restaurant chez Sandrine"></a></div>
                                         <div class="info">
-                                            <h6>visit us </h6>
+                                            <h6>Venez passer un moment convial chez Sandrine</h6>
                                             <ul>
-                                                <li>Restoria, Arrondissement, Paris 9578</li>
-                                                <li>Daily - 8.00 am to 10.00 pm</li>
-                                                <li><a href="mailto:booking@domainname.com">booking@gmail.com</a></li>
-                                                <li><a href="tel:+88-123-123456">Booking Request : +88-123-123456</a></li>
-                                                
+                                                <li>159 rue des illards, 01140 Saint-Didier-sur chalaronne</li><br><hr>
+                                                <li>Horaires :</li>
+                                                <li>Mardi au samedi : 18h30 - 22h30<br> dimanche : 12h00 - 15h00 et 18h30 - 22h30</li><br>
+                                                <div class="separator"><span> </span> </div>
+                                                <li><a href="mailto:campingchalaronne@orange.fr">campingchalaronne@orange.fr</a></li>
+                                                <li>Téléphone : 04 74 02 56 14</a></li>
                                             </ul>
-                                        </div>
-                                        <div class="separator"><span> </span> </div>
-                                        <div class="newsletter">
-                                            <h4>Our Newsletter</h4>
-                                            <div class="text">Subscribe us & Get 25% Off. Get latest updates.</div>
-                                            <div class="newsletter-form">
-                                                <form method="post" action="index.html">
-                                                    <div class="form-group">
-                                                        <span class="alt-icon far fa-envelope"></span>
-                                                        <input type="email" name="email" value="" placeholder="Your email" required>
-                                                        <button type="submit" class="theme-btn btn-style-one clearfix">
-                                                            <span class="btn-wrap">
-                                                                <span class="text-one">subscribe</span>
-                                                                <span class="text-two">subscribe</span>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -352,13 +233,13 @@
                             <!--Footer Col-->
                             <div class="footer-col footer-image-col col-lg-3 col-md-6 col-sm-12">
                                 <div class="footer-image">
-                                    <img src="{{ asset('assets/images/resource/footer-img-1.jpg') }}" alt="image">
+                                    <img src="{{ asset('assets/images/braseroplein.JPG') }}" alt="image">
                                 </div>
                             </div>
                             <!--Footer Col-->
                             <div class="footer-col footer-image-col last col-lg-3 col-md-6 col-sm-12">
                                 <div class="footer-image">
-                                    <img src="{{ asset('assets/images/resource/footer-img-2.jpg') }}" alt="image">
+                                    <img src="{{ asset('assets/images/tableresto.jpeg') }}" alt="image">
                                 </div>
                             </div>
                         </div>
@@ -372,7 +253,7 @@
                     <!-- row start -->
                     <div class="row clearfix">
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <p>© 2025 All Rights Reserved</p>
+                        <p class="text-white">© 2026 Tous droits réservés</p>
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -385,7 +266,7 @@
                     </div>
 
                     <div class="col-lg-4 col-md-4 col-sm-12">
-                        <p class="developer_text">Crafted by <a href="https://themeforest.net/user/kalanidhithemes/portfolio" target="blank">Kalanidhi Themes</a></p>
+                        <p class="developer_text text-white">Crée par Enzo D'aloia-D'ignazio</p>
                     </div>
                     </div>
                 <!-- row end -->
