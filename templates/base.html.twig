@@ -22,16 +22,17 @@
         <meta name="twitter:title" content="{% block twitter_title %}Restaurant de la Chalaronne – Cuisine traditionnelle{% endblock %}">
         <meta name="twitter:description" content="{% block twitter_description %}Découvrez une cuisine maison et conviviale au Restaurant de la Chalaronne à Saint-Didier-sur-Chalaronne.{% endblock %}">
         <meta name="twitter:image" content="{% block twitter_image %}{{ asset('assets/images/logo_resto_chalaronne.png') }}{% endblock %}">
-        {# Favicon #}
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/logo/Logo_camping_chalaronne_dark.png?v=2') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/img/logo/Logo_camping_chalaronne_dark.png?v=2') }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/logo/Logo_camping_chalaronne_dark.png?v=2') }}">
-        <link rel="shortcut icon" href="{{ asset('assets/img/logo/Logo_camping_chalaronne_dark.png?v=2') }}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
             {# <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
             <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}"> #}
+
+            {# Favicon #}
+            <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png?v=2') }}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png?v=2') }}">
+            <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png?v=2') }}">
+            <link rel="shortcut icon" href="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png?v=2') }}">
         {% endblock %}
 
         {% block javascripts %}
