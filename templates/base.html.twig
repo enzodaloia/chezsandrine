@@ -56,6 +56,48 @@
         {% endblock %}
     </head>
     <body>
+        <style>
+            /* ===== HEADER BASE ===== */
+            .header-upper {
+                transition: all 0.3s ease;
+            }
+
+            /* LOGO */
+            .logo-box {
+                height: 150px;
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+
+            .logo-box img {
+                height: 120px;
+                transition: all 0.3s ease;
+            }
+
+            /* ===== SCROLL STATE ===== */
+            .nav-scrolled .logo-box {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+
+                /* IMPORTANT : enlève l’espace occupé */
+                height: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* compacte la navbar */
+            .nav-scrolled .header-upper {
+                padding: 0;
+            }
+
+            /* optionnel : réduire la hauteur globale */
+            .nav-scrolled .main-box {
+                min-height: 80px;
+                align-items: center;
+            }
+        </style>
         <div class="page-wrapper"> 
   
             <!-- Preloader -->
@@ -113,7 +155,7 @@
             <!-- Preloader End -->
             
             <!-- Main Header-->
-            <header class="main-header header-down">
+            <header class="main-header header-down" id="mainNav">
                 {# <div class="header-top">
                     <div class="auto-container">
                         <div class="inner clearfix">
@@ -139,7 +181,7 @@
                         <div class="main-box clearfix">
                             <!--Logo-->
                             <div class="logo-box">
-                                {# <div class="logo"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" alt="image" title="Restaurant chez Sandrine" style="width: 100%; height: 150px;"></a></div> #}
+                                <div class="logo"><a href="index.html" title="Restoria - Restaurants HTML Template"><img src="{{ asset('assets/css/images/logo_camping_chalaronne_dark.png') }}" alt="image" title="Restaurant chez Sandrine" style="width: 100%; height: 150px;"></a></div>
                             </div>
 
                             <div class="nav-box clearfix">
@@ -298,5 +340,16 @@
                 </div>
             </footer>
         <div>
+        <script>
+            window.addEventListener("scroll", function () {
+                const nav = document.getElementById("mainNav");
+
+                if (window.scrollY > 50) {
+                    nav.classList.add("nav-scrolled");
+                } else {
+                    nav.classList.remove("nav-scrolled");
+                }
+            });
+        </script>
     </body>
 </html>
