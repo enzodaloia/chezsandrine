@@ -2,8 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <title>{% block title %}Restaurant de la Chalaronne – Cuisine traditionnelle à Saint-Didier-sur-Chalaronne{% endblock %}</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="{% block meta_description %}Découvrez le Restaurant de la Chalaronne à Saint-Didier-sur-Chalaronne. Une cuisine maison, conviviale et authentique, idéale pour vos repas en famille, entre amis ou en couple.{% endblock %}">
+
+        <meta name="keywords" content="Restaurant de la Chalaronne, Restaurant Saint-Didier-sur-Chalaronne, Restaurant Ain, Restaurant traditionnel Ain, Cuisine maison Ain, Restaurant convivial Ain, Restaurant famille Ain, Restaurant proche Bresse, Où manger Saint-Didier-sur-Chalaronne, Restaurant terrasse Ain, Restaurant local Ain, Cuisine française Ain, Restaurant fait maison, Repas en famille Ain, Restaurant entre amis Ain, Restaurant proche Lyon, Restaurant dans l’Ain, Restaurant avec terrasse, Restaurant chaleureux, Restaurant près rivière Chalaronne, Restaurant du camping Chalaronne, Restaurant Bresse Ain, Sortir manger Ain Rhône-Alpes">
+
+        <!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+        <meta property="og:title" content="{% block og_title %}Restaurant de la Chalaronne – Cuisine traditionnelle et conviviale{% endblock %}">
+        <meta property="og:description" content="{% block og_description %}Profitez d’un moment gourmand au Restaurant de la Chalaronne à Saint-Didier-sur-Chalaronne. Cuisine maison et ambiance chaleureuse au rendez-vous.{% endblock %}">
+        <meta property="og:image" content="{% block og_image %}{{ asset('assets/images/logo_resto_chalaronne.png') }}{% endblock %}">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ app.request.uri }}">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{% block twitter_title %}Restaurant de la Chalaronne – Cuisine traditionnelle{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}Découvrez une cuisine maison et conviviale au Restaurant de la Chalaronne à Saint-Didier-sur-Chalaronne.{% endblock %}">
+        <meta name="twitter:image" content="{% block twitter_image %}{{ asset('assets/images/logo_resto_chalaronne.png') }}{% endblock %}">
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
             {# <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -126,9 +144,9 @@
                                             <li><a href="{{ path('app_index') }}">Accueil</a></li>
                                             <li class="dropdown"><a href="#">Nos cartes</a>
                                                 <ul>
-                                                    <li><a href="#">Menu</a></li>
-                                                    <li><a href="#">Desserts</a></li>
-                                                    <li><a href="#">Boissons</a></li>
+                                                    <li><a href="{{ asset('assets/images/cartes/Menu.pdf') }}" target="_blank">Menu</a></li>
+                                                    <li><a href="{{ asset('assets/images/cartes/desserts.pdf') }}" target="_blank">Desserts</a></li>
+                                                    <li><a href="{{ asset('assets/images/cartes/boissons.pdf') }}" target="_blank">Boissons</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="{{ path('app_contact') }}">Contact</a></li>
@@ -169,9 +187,9 @@
                             <li><a href="{{ path('app_index') }}">Accueil</a></li>
                             <li class="dropdown"><a href="#">Nos cartes</a>
                                 <ul>
-                                    <li><a href="#">Menu</a></li>
-                                    <li><a href="#">Desserts</a></li>
-                                    <li><a href="#">Boissons</a></li>
+                                    <li><a href="{{ asset('assets/images/cartes/Menu.pdf') }}">Menu</a></li>
+                                    <li><a href="{{ asset('assets/images/cartes/desserts.pdf') }}">Desserts</a></li>
+                                    <li><a href="{{ asset('assets/images/cartes/boissons.pdf') }}">Boissons</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{ path('app_contact') }}">Contact</a></li>
@@ -258,10 +276,9 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-12">
                         <ul class="social_media">
-                        <li><a href="https://themeforest.net/user/kalanidhithemes/portfolio" aria-label="facebook page" ><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.behance.net/kalanidhithemes" aria-label="twitter page"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="https://themeforest.net/user/kalanidhithemes/portfolio" aria-label="instagram page"><i class="fa-brands fa-pinterest-p"></i></a></li>
-                        <li><a href="https://themeforest.net/user/kalanidhithemes/portfolio" aria-label="pinterest page"><i class="fa-brands fa-youtube"></i></a></li>
+                        <li><a href="https://www.facebook.com/p/Camping-r%C3%A9sidentiel-de-la-Chalaronne-100090197112458/" aria-label="facebook page" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/camping_de_la_chalaronne_/" aria-label="instagram page"target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/camping_de_la_chalaronne_/" aria-label="instagram page" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
                         </ul>
                     </div>
 

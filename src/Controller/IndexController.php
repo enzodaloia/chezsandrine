@@ -15,12 +15,4 @@ final class IndexController extends AbstractController
             'controller_name' => 'IndexController',
         ]);
     }
-
-    #[Route('/contact', name: 'app_contact')]
-    public function contact(): Response
-    {
-        return $this->render('index/contact.html.twig', [
-            'controller_name' => 'IndexController',
-        ]);
-    }
 }
