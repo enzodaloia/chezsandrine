@@ -83,6 +83,7 @@
                                         <textarea name="message" placeholder="Votre message..." required=""></textarea>
                                     </div>
                                 </div>
+                                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
 
                                 <div class="form-group">
                                     <button type="submit" class="theme-btn btn-style-one clearfix">
@@ -117,4 +118,19 @@
         </iframe>
     </div>
 </section>
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha_site_key }}"></script>
+
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    grecaptcha.ready(() => {
+        grecaptcha.execute('{{ recaptcha_site_key }}', {action: 'submit'}).then(token => {
+            document.getElementById('recaptcha_token').value = token;
+            e.target.submit();
+        });
+    });
+});
+</script>
 {% endblock %}

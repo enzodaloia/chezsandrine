@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\Transport;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 final class ContactController extends AbstractController
 {
@@ -16,13 +17,32 @@ final class ContactController extends AbstractController
     public function contact(): Response
     {
         return $this->render('index/contact.html.twig', [
-            'controller_name' => 'IndexController',
+            'recaptcha_site_key' => $_ENV['RECAPTCHA_SITE_KEY'],
         ]);
     }
 
     #[Route('/send-message', name: 'app_send_message', methods: ['POST'])]
-    public function send(Request $request): Response
+    public function send(Request $request, HttpClientInterface $httpClient): Response
     {
+        $token = $request->request->get('recaptcha_token');
+
+        if (!$token) {
+            throw new \Exception('Token reCAPTCHA manquant');
+        }
+
+        $response = $httpClient->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
+            'body' => [
+                'secret' => $_ENV['RECAPTCHA_SECRET_KEY'],
+                'response' => $token,
+            ],
+        ]);
+
+        $data = $response->toArray();
+
+        if (!$data['success'] || $data['score'] < 0.5 || $data['action'] !== 'submit') {
+            $this->addFlash('error', 'Échec de la vérification anti-spam.');
+            return $this->redirectToRoute('app_contact');
+        }
         $fullname = $request->request->get('fullname');
         $telephone = $request->request->get('telephone');
         $emailUser = $request->request->get('email');
@@ -42,8 +62,8 @@ final class ContactController extends AbstractController
         $email = (new Email())
             ->from('contact@restaurant-chez-sandrine.fr')
             ->replyTo($emailUser)
-            ->to('campingchalaronne@orange.fr')
-            // ->to('enzo73.daloia@gmail.com')
+            // ->to('campingchalaronne@orange.fr')
+            ->to('enzo73.daloia@gmail.com')
             ->subject('Nouveau message du site du camping')
             ->text($texteMail);
 
